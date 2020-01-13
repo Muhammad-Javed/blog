@@ -1,0 +1,7 @@
+
+  <h3><%= post.title%></h3>
+  <%= link_to "Read", post%>
+  <%= link_to 'New', new_post_path %>
+  <%= link_to "Edit", edit_post_path(post.id) %>
+  <%= link_to "Delete", post_path(post.id), method: :delete, data:{confirm: "Are You sure You?"}%>
+  <%= link_to "Preview", preview_post_path(post.id)%>

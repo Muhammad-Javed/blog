@@ -1,0 +1,14 @@
+
+<%= form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :commenter %><br>
+    <%= form.text_field :commenter, minlength: 5, maxlength:30, :required => true  %>
+  </p>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body, minlength: 10, maxlength:255, :required => true %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
